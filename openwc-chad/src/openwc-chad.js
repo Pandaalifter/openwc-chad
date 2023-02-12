@@ -165,7 +165,7 @@ class OpenwcChad extends LitElement {
       console.log(cloneCard);
   }
 
-  background(event){
+  background(){
     this.shadowRoot.querySelectorAll(".card").forEach((item) => {
       if(!item.classList.contains("basic")){
            item.classList.add("basic");
@@ -178,7 +178,7 @@ class OpenwcChad extends LitElement {
     });
   }
 
-  heading(event){
+  heading(){
     this.shadowRoot.querySelectorAll(".title").forEach((item) => {   
       if(item.innerHTML=="something else"){
         item.innerHTML="Chad of Cyber IST";
@@ -189,7 +189,7 @@ class OpenwcChad extends LitElement {
     });
   }
 
-  deleter(event){
+  deleter(){
       document.querySelector(".card:last-child").remove();
       console.log(card);
   }
