@@ -159,6 +159,41 @@ class OpenwcChad extends LitElement {
     this.header = 'My Chadical App';
   }
 
+  duplicate(event){
+      const cloneCard = this.shadowRoot.querySelector(".card").cloneNode(true);
+      document.body.appendChild(cloneCard);
+      console.log(cloneCard);
+  }
+
+  background(event){
+    this.shadowRoot.querySelectorAll(".card").forEach((item) => {
+      if(!item.classList.contains("basic")){
+           item.classList.add("basic");
+           console.log(item);
+      }
+      else{
+        item.classList.remove("basic");
+        console.log(item);
+      }
+    });
+  }
+
+  heading(event){
+    this.shadowRoot.querySelectorAll(".title").forEach((item) => {   
+      if(item.innerHTML=="something else"){
+        item.innerHTML="Chad of Cyber IST";
+      }
+      else{
+        item.innerHTML="something else";
+      }
+    });
+  }
+
+  deleter(event){
+      document.querySelector(".card:last-child").remove();
+      console.log(card);
+  }
+
   render() {
     return html`
       <main>
@@ -167,10 +202,10 @@ class OpenwcChad extends LitElement {
       </main>
 
       <div class"btnSpacing">
-      <button class="outsideBtn">Duplicate</button>
-      <button class="outsideBtn">Background</button>
-      <button class="outsideBtn">Heading</button>
-      <button class="outsideBtn">Delete</button>
+      <button class="outsideBtn" @click=${this.duplicate}>Duplicate</button>
+      <button class="outsideBtn" @click=${this.background}>Background</button>
+      <button class="outsideBtn" @click=${this.heading}>Heading</button>
+      <button class="outsideBtn" @click=${this.deleter}>Delete</button>
       </div>
 
       <div class="card">
