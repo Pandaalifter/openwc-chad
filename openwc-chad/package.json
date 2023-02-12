@@ -5,6 +5,8 @@
   "author": "openwc-chad",
   "version": "0.0.0",
   "type": "module",
+  "main": "index.html",
+  "module": "index.html",
   "scripts": {
     "lint": "eslint --ext .js,.html . --ignore-path .gitignore && prettier \"**/*.js\" --check --ignore-path .gitignore",
     "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore",
@@ -55,7 +57,11 @@
     "singleQuote": true,
     "arrowParens": "avoid"
   },
-
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.js": [
       "eslint --fix",
