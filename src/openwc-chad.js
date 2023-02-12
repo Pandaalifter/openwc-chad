@@ -8,19 +8,7 @@ class OpenwcChad extends LitElement {
   }
 
   static styles = css`
-    :host {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      font-size: calc(10px + 2vmin);
-      color: #1a2b42;
-      max-width: 960px;
-      margin: 0 auto;
-      text-align: center;
-      background-color: var(--openwc-chad-background-color);
-    }
+    
 
     main {
       flex-grow: 1;
@@ -156,11 +144,10 @@ class OpenwcChad extends LitElement {
 
   constructor() {
     super();
-    this.header = 'My Chadical App';
   }
 
   duplicate(event){
-      const cloneCard = this.shadowRoot.querySelector(".card").cloneNode(true);
+      const cloneCard = this.cloneNode(true);
       document.body.appendChild(cloneCard);
       console.log(cloneCard);
   }
@@ -179,7 +166,7 @@ class OpenwcChad extends LitElement {
   }
 
   heading(){
-    this.shadowRoot.querySelectorAll(".title").forEach((item) => {   
+    document.querySelector('openwc-chad').shadowRoot.querySelectorAll(".title").forEach((item) => {   
       if(item.innerHTML=="something else"){
         item.innerHTML="Chad of Cyber IST";
       }
@@ -190,16 +177,13 @@ class OpenwcChad extends LitElement {
   }
 
   deleter(){
-      document.querySelector(".card:last-child").remove();
+      this.remove();
       console.log(card);
   }
 
   render() {
     return html`
-      <main>
-        <div><img alt="open-wc logo" src=${logo} class="logo" /></div>
-        <h1>${this.header}</h1>
-      </main>
+      
 
       <div class"btnSpacing">
       <button class="outsideBtn" @click=${this.duplicate}>Duplicate</button>
@@ -222,15 +206,7 @@ class OpenwcChad extends LitElement {
         </div>
       </div>
 
-      <p class="app-footer">
-        🚽 Made with love by
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/open-wc"
-          >open-wc</a
-        >.
-      </p>
+      
     `;
   }
 }
