@@ -14,7 +14,6 @@ class OpenwcChad extends LitElement {
       flex-grow: 1;
     }
 
-
     .card{
       border-radius: 24px;
       border: 3px solid #041E42;
@@ -28,6 +27,7 @@ class OpenwcChad extends LitElement {
       background-color: lightgrey;
       text-align: center;
       font-family: Arial, Helvetica, sans-serif;
+      margin-bottom: 10vh;
     }
     .textbox{
       font-size: 15px;
