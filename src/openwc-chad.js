@@ -27,7 +27,7 @@ class OpenwcChad extends LitElement {
       background-color: lightgrey;
       text-align: center;
       font-family: Arial, Helvetica, sans-serif;
-      margin-bottom: 10vh;
+      margin-bottom: 20px;
     }
     .textbox{
       font-size: 15px;
