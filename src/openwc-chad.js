@@ -14,30 +14,6 @@ class OpenwcChad extends LitElement {
       flex-grow: 1;
     }
 
-    .logo {
-      margin-top: 10px;
-      width: 100px;
-      height: 100px;
-      animation: app-logo-spin infinite 20s linear;
-    }
-
-    @keyframes app-logo-spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .app-footer {
-      font-size: calc(12px + 0.5vmin);
-      align-items: center;
-    }
-
-    .app-footer a {
-      margin-left: 5px;
-    }
 
     .card{
       border-radius: 24px;
