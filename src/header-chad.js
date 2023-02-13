@@ -61,8 +61,7 @@ class HeaderChad extends LitElement {
       <main>
         <div><img alt="open-wc logo" src=${logo} class="logo" /></div>
         <h1>${this.header}</h1>
-      </main>
-      <p class="app-footer">
+        <p class="app-footer">
         🚽 Made with love by
         <a
           target="_blank"
@@ -71,6 +70,8 @@ class HeaderChad extends LitElement {
           >open-wc</a
         >.
       </p>
+      </main>
+      
     `;
     }
 }
